@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en" id="theme" class="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/auction-fevicon.png">
+    <title>Login</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader bg-light" id="preloader">
+        <span class="preloader-inner"></span>
+    </div>
+    <!-- Preloader End -->
+    <div class="toggle-theme d-none">
+        <input type="checkbox" class="changeTheme" id="changeTheme">
+        <label for="changeTheme" class="m-auto"></label>
+    </div>
+    <div class="login-wrapper" id="login-wrapper" style="background-image: url('assets/images/login-bg.svg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="form-wrapper text-center">
+                        <a class="d-inline-block mb-2" href="index.html">
+                            <img src="assets/images/auction-fevicon.png" class="themeLogo img-fluid" alt="logo">
+                        </a>
+                        <h2 class="display-6 fw-bold mb-3">Log In</h2>
+                        <p class="mb-4">Add your credentials below to login</p>
+                        <form action="#" onsubmit="login()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Email*</label>
+                                        <input type="email" class="form-control" placeholder="name@mail.com" id="LoginEmail" required name="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-group formPassword">
+                                        <label>Password*</label>
+                                        <input type="password" class="form-control" placeholder="****" required id="LoginPassword" name="Password">
+                                        <span class="input-checker password-show-hide"><i
+                                                class="fa-regular fa-eye-slash"></i></span>
+                                        <a href="ForgetPassword.html" class="position-absolute end-0">Forgot
+                                            Password?</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <button class="primary-btn w-100" type="submit">Login</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="border-bottom border-dark mb-4" style="height: 1px;">
+                                    <span class="position-relative px-2 text-dark"
+                                        style="top: -13px; background: var(--bg-wrapper)">OR</span>
+                                </p>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button class="primary-btn bg-light text-black border-dark w-100 text-capitalize" id="google-login-btn">
+                                    <i class="fa-brands fa-google"></i><span class="ms-2">Continue with
+                                        google</span>
+                                </button>
+                            </div>
+                            <p>Don't have an account? <a href="signup.html">Create an account</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javascript/LoginByGoogle.js" type="module"></script>
+    <script src="javascript/Login.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).ready(function () {
+                if (localStorage.storedValue == 'dark') {
+                    $('#changeTheme').prop('checked', true);
+                    $('#changeTheme1').prop('checked', true);
+                    document.getElementById("theme").className = "dark";
+                    document.getElementById('login-wrapper').style.backgroundImage = "url('assets/images/login-bg-dark.svg')";
+                }
+                else {
+                    $('#changeTheme').prop('checked', false);
+                    $('#changeTheme1').prop('checked', false);
+                    document.getElementById("theme").className = "light";
+                    document.getElementsByClassName('login-wrapper').style.backgroundImage = "url('assets/images/login-bg.svg')";
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

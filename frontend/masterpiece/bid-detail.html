@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en" id="theme" class="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/auction-fevicon.png">
+    <title>Bid Detail</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader bg-light" id="preloader">
+        <span class="preloader-inner"></span>
+    </div>
+    <!-- Preloader End -->
+    <!-- Back-to-top Start -->
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa-solid fa-up-long"></i></a>
+    <!-- Back-to-top End -->
+    <!-- Header Start !-->
+    <div class="navbar-top border-bottom py-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="d-flex gap-2">
+                        <div class="d-none align-items-center gap-1 nav-top-left">
+                            <i class="fa-solid fa-envelope text-dark"></i>
+                            <p class="fs-14 text-dark text-truncate">Laqtq@lqt.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="toggle-theme">
+                        <input type="checkbox" id="changeTheme1" class="changeTheme" value="0">
+                        <label for="changeTheme1" class="m-auto"></label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex gap-2 nav-btn-group align-items-center justify-content-end">
+                        <a href="browse-bid.html" class="bg-transparent text-dark border-0 px-1" >
+                            <i class="fa-solid fa-search"></i>
+                        </a>
+                        <a href="dashboard.html" id="Dashboard" class="bg-transparent text-dark border-0 px-1">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <button class="bg-transparent text-dark border-0"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="bg-white" id="header">
+        <nav class="navbar navbar-expand-lg py-1">
+            <div class="container">
+                <a class="navbar-brand p-0" href="index.html">
+                    <img src="assets/images/Logo.svg" id="headerLogo" class="themeLogo img-fluid w-100" alt="logo">
+                </a>
+                <div class="nav-right justify-content-center" id="navbar">
+                    <ul class="navbar-nav position-relative d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="browse-bid.html">browse bid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="about.html">about</a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav d-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="browse-bid.html">browse bid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="about.html">about</a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        </li><li>
+                            <hr>
+                        </li>
+                       
+                        <li>
+                            <hr>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-flex gap-2 nav-btn-group align-items-center justify-content-center">
+                                <button class="bg-transparent text-dark border-0">
+                                    <i class="fa-solid fa-search"></i>
+                                </button>
+                                <a href="dashboard.html" class="bg-transparent text-dark border-0 px-1" id="Dashbord2">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <button class="bg-transparent text-dark border-0"><i
+                                        class="fa-solid fa-heart"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li class="nav-item">
+                            <div class="toggle-theme">
+                                <input type="checkbox" class="changeTheme" id="changeTheme" value="0">
+                                <label for="changeTheme" class="me-auto"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex gap-4 nav-btn-group align-items-center">
+                    <a id="login-link" href="login.html" class="primary-btn">
+                        Login 
+                    </a>
+                    <a id="register-link" href="signup.html" class="primary-btn">
+                       Register
+                    </a>
+                    <a id="logout-link" href="#" class="primary-btn" >
+                        Logout
+                     </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="nav-right" data-bs-target="#navbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggle-menu-icon"><span></span><span></span><span></span><span></span></span>
+                    </button>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <!-- Header End !-->
+    <!-- Main Content Start !-->
+    <main id="main-content" class="position-relative">
+        <div class="breadcrumb-main">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    
+                    <h1 class="breadcrumb-title mx-auto align-self-center">bid Details</h1>
+                </div>
+            </div>
+        </div>
+        <section class="single-bid-product outer-gap">
+            <div class="container" id="bids-details">
+                <div class="row gy-4 gy-md-5">
+                    <!-- Image and Timer Column -->
+                    <div class="col-lg-8">
+                        <div class="card-image">
+                            <img id="productImage" src="assets/images/placeholder.png" alt="auction-card-img">
+                            <div class="timer-wrapper">
+                                <div class="timer-inner" id="countdown-timer">
+                                    <!-- Timer will be inserted here -->
+                                    <span class="days">0D</span>:<span class="hours">0H</span>:<span class="minutes">0M</span>:<span class="seconds">0S</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Product Details Column -->
+                    <div class="col-lg-4">
+                        <div class="product-bid-widget h-100">
+                            <h3 class="title" id="productName">Placeholder Title</h3>
+                            <ul>
+                                <li><span>Country</span><span id="productCountry">Placeholder Country</span></li>
+                                <li><span>Start Bid</span><span id="startBid">$0.00</span></li>
+                                <li><span>Latest Bid</span><span id="latestBid">$0.00</span></li>
+                                <li><span>Total Bids</span><span id="totalBids">0</span></li>
+                            </ul>
+                            <div class="d-flex flex-wrap justify-content-between gap-2">
+                                <div class="item-quantity">
+                                    <span class="input-group-tex decrement">
+                                        <button id="minus" onclick="down()">-</button>
+                                    </span>
+                                    <input type="number" id="bidAmount" value="1">
+                                    <span class="input-group-tex increment">
+                                        <button id="plus" onclick="up()">+</button>
+                                    </span>
+                                </div>
+                                <button class="primary-btn d-flex align-items-center" onclick="placeBid()">Bid Now</button>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                <p class="p-0">Add to wishlist</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Tabbed Product Details -->
+                    <div class="col-12">
+                        <div class="product-detail-wrapper">
+                            <ul class="nav nav-tabs d-none d-md-flex" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content accordion" id="myTabContent">
+                                <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <div class="accordion-body">
+                                        <div class="d-flex flex-wrap product-disc-stats">
+                                            <div class="p-2 p-sm-3 border border-opacity-10 flex-grow-1">
+                                                <h5 class="mb-1">Quantity</h5>
+                                                <p id="productQuantity">1 item</p>
+                                            </div>
+                                            <div class="p-2 p-sm-3 border border-opacity-10 flex-grow-1">
+                                                <h5 class="mb-1">View</h5>
+                                                <p id="productView">0</p>
+                                            </div>
+                                            <div class="p-2 p-sm-3 border border-opacity-10 flex-grow-1">
+                                                <h5 class="mb-1">Brand</h5>
+                                                <p id="productBrand">N/A</p>
+                                            </div>
+                                            <div class="p-2 p-sm-3 border border-opacity-10 flex-grow-1">
+                                                <h5 class="mb-1">Publish Date</h5>
+                                                <p id="productPublishDate">Placeholder Date</p>
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Product Description</h4>
+                                        <p id="productDescription" class="mb-2">Description goes here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="outer-gap auction-card-small">
+            <div class="container">
+                <h2 class="section-title">Related products</h2>
+                <div class="swiper product-swiper px-0">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-1.png" alt="auction-card-img">
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">Mendinib top violin from best
+                                        artist</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-2.png" alt="auction-card-img">
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">An antique vintage landline
+                                        telephone</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-3.png" alt="auction-card-img">
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">Old baseball bat with ball and
+                                        weathered glove</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-4.png" alt="auction-card-img">
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">Heritage french style home</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-5.png" alt="auction-card-img">
+
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">Arabic old style patterned teapot</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="auction-card">
+                                <div class="card-image">
+                                    <img src="assets/images/recent-auction-6.png" alt="auction-card-img">
+
+                                    <div class="timer-wrapper">
+                                        <div class="timer-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <a href="bid-detail.html" class="card-title">Vintage wall clock</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="p-0">Current bid <span>589.00$</span></p>
+                                        <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main Content End !-->
+    <!-- Footer Start !-->
+    <footer>
+        <div class="footer-top bg-dark inner-gap">
+            <div class="container">
+                <div class="row gy-4 gy-lg-3">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="footer-disc">
+                            <a href="index.html" class="footer-logo">
+                                <img src="assets/images/logo-white.svg" id="footerLogo" class="fThemeLogo img-fluid"
+                                    alt="logo">
+                            </a>
+                            <p>Unlock treasures through exhilarating auctions. Your gateway to rare finds and
+                                captivating experiences awaits.</p>
+                            <a href="mailto:info@bidzone.com" class="h4 fw-normal text-white">info@bidzone.com</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Sitemap</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="javascript:void(0)">Support</a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">FAQS</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Categories</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="browse-bid.html">Music</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">jewellery</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">Real Estate</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">vehicle</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">Clothes</a>
+                                </li>
+                                <li>
+                                    <a href="browse-bid.html">sports</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Navigation</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="signup.html">my account</a>
+                                </li>
+                                <li>
+                                    <a href="bid-history.html">Bid History</a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html">checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-2">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Legal</h5>
+                            <ul class="ps-3 widget-links">
+                                <li>
+                                    <a href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="cookies-policy.html">Cookies Policy</a>
+                                </li>
+                                <li>
+                                    <a href="term-condition.html">Terms Of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 my-lg-5 border-white">
+                <div
+                    class="d-flex flex-wrap gap-4 justify-content-center justify-content-xl-between align-items-center">
+                    <ul class="footer-social-links">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="bid-number">
+                        <h2><span>1,50,000</span> Bids</h2>
+                        <h2><span>10,376</span> Members</h2>
+                        <h2><span>8942</span> Feedbacks</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-2 py-md-4 bg-light">
+            <p class="text-dark text-center">©
+                <script>document.write(new Date().getFullYear());</script> Laqta - All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer End !-->
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javascript/bid-Detail.js"></script>
+    <script src="javascript/navbar.js"></script>
+    <script>
+        var swiper = new Swiper(".product-swiper", {
+            spaceBetween: 32,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                450: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                },
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8a958acc0f4c32ad',t:'MTcyMjAwODk5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>

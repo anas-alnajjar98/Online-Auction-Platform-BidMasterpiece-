@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" id="theme" class="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/auction-fevicon.png">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+    <style>
+        /* Make the form more compact and uniform */
+        .form-control, .form-select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+
+        /* Button Enhancements */
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Validation Feedback Customization */
+        .is-invalid {
+            border-color: #dc3545;
+        }
+
+        .invalid-feedback {
+            display: block;
+        }
+        .table thead th {
+        text-align: center;
+        font-size: 16px;
+        background-color: #343a40;
+        color: white;
+    }
+
+    .table td {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 15px;
+        padding: 15px;
+    }
+
+   
+    .table img {
+        width: 100px;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 5px 0;
+    }
+
+    /* Add a shadow to the table for better visual separation */
+    .table {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Make the table rows a bit larger for better interaction */
+    .table td {
+        padding: 20px;
+    }
+
+    /* Improve the hover effect */
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Tooltip styling */
+    .tooltip-inner {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .tooltip-arrow {
+        display: none;
+    }
+    </style>
+</head>
+<div class="navbar-top border-bottom py-3 d-none d-lg-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-4">
+                <div class="d-flex gap-2">
+                    <div class="d-none align-items-center gap-1 nav-top-left">
+                        <i class="fa-solid fa-envelope text-dark"></i>
+                        <p class="fs-14 text-dark text-truncate">Laqtq@lqt.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="toggle-theme">
+                    <input type="checkbox" id="changeTheme1" class="changeTheme" value="0">
+                    <label for="changeTheme1" class="m-auto"></label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="d-flex gap-2 nav-btn-group align-items-center justify-content-end">
+                    <a href="browse-bid.html" class="bg-transparent text-dark border-0 px-1" >
+                        <i class="fa-solid fa-search"></i>
+                    </a>
+                    <a href="dashboard.html" id="Dashboard" class="bg-transparent text-dark border-0 px-1">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <button class="bg-transparent text-dark border-0"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="bg-white" id="header">
+    <nav class="navbar navbar-expand-lg py-1">
+        <div class="container">
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="assets/images/Logo.svg" id="headerLogo" class="themeLogo img-fluid w-100" alt="logo">
+            </a>
+            <div class="nav-right justify-content-center" id="navbar">
+                <ul class="navbar-nav position-relative d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="browse-bid.html">browse bid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="faq.html">faq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="about.html">about</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-block d-lg-none">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="browse-bid.html">browse bid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="faq.html">faq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="about.html">about</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                    </li><li>
+                        <hr>
+                    </li>
+                   
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex gap-2 nav-btn-group align-items-center justify-content-center">
+                            <button class="bg-transparent text-dark border-0">
+                                <i class="fa-solid fa-search"></i>
+                            </button>
+                            <a href="dashboard.html" class="bg-transparent text-dark border-0 px-1" id="Dashbord2">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <button class="bg-transparent text-dark border-0"><i
+                                    class="fa-solid fa-heart"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="nav-item">
+                        <div class="toggle-theme">
+                            <input type="checkbox" class="changeTheme" id="changeTheme" value="0">
+                            <label for="changeTheme" class="me-auto"></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex gap-4 nav-btn-group align-items-center">
+                <a id="login-link" href="login.html" class="primary-btn">
+                    Login 
+                </a>
+                <a id="register-link" href="signup.html" class="primary-btn">
+                   Register
+                </a>
+                <a id="logout-link" href="#" class="primary-btn" >
+                    Logout
+                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="nav-right" data-bs-target="#navbar"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggle-menu-icon"><span></span><span></span><span></span><span></span></span>
+                </button>
+            </div>
+            
+        </div>
+    </nav>
+</header>
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader bg-light" id="preloader">
+        <span class="preloader-inner"></span>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Back-to-top Start -->
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa-solid fa-up-long"></i></a>
+    <!-- Back-to-top End -->
+
+    <!-- Main Content Start -->
+    <main id="main-content" class="position-relative">
+        <div class="breadcrumb-main">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <h1 class="breadcrumb-title mx-auto align-self-center">Personal Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="inner-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 pe-lg-0 position-relative">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3 mt-3 mb-4">
+                                <img src="assets/images/avatar-5.png" class="dashboard-avatar" alt="avatar" id="userImg">
+                                <div>
+                                    <h5 id="userName">Rozzy Nomad</h5>
+                                    <p id="userEmail">system@mail.com</p>
+                                </div>
+                            </div>
+
+                            <button class="primary-btn dashboard-toggler d-block d-lg-none" id="sidebarMenuOpen">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="dashboard-sidebar">
+                            <div class="sidebar-menu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-user"></i> <span>Personal Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-gavel"></i> <span>My Bids</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-trophy"></i> <span>Winning Bids</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-bell"></i> <span>My Alerts</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-star"></i> <span>My Favorite</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-key"></i> <span>Change Password</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 ps-md-0">
+                        <!-- Dashboard Sections (for toggling) -->
+                        <div id="Dashboard" class="dashboard-section" style="display: block;">
+                            <div class="dashboard-data">
+                                <!-- Active Bids Section -->
+                                <div class="row g-3 mb-3 mb-md-5">
+                                    <div class="col-md-4">
+                                        <div class="card-wrapper">
+                                            <div class="d-flex gap-4">
+                                                <i class="fa-solid fa-gavel text-orange"></i>
+                                                <div>
+                                                    <h3 class="fw-bold" id="activeBidsCount">0</h3>
+                                                    <p>Active Bids</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card-wrapper">
+                                            <div class="d-flex gap-4">
+                                                <i class="fa-solid fa-trophy text-orange"></i>
+                                                <div>
+                                                    <h3 class="fw-bold" id="winningBidsCount">0</h3>
+                                                    <p>Item Won</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card-wrapper">
+                                            <div class="d-flex gap-4">
+                                                <i class="fa-solid fa-star text-orange"></i>
+                                                <div>
+                                                    <h3 class="fw-bold" id="favoritesCount">0</h3>
+                                                    <p>Favorites</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bidding-detail-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item List</th>
+                                                    <th>Last Bid</th>
+                                                    <th>Opening Bid</th>
+                                                    <th>Left Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bidHistoryTableBody">
+                                                <!-- Bid history will be injected here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Profile Section -->
+                        <div id="PersonalProfile" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <h3 class="mb-4">Edit Your Profile</h3>
+                        
+                                <form id="editProfileForm" class="needs-validation" enctype="multipart/form-data" novalidate>
+                                    <!-- Personal Information Section -->
+                                    <h5 class="mb-3">Personal Information</h5>
+                        
+                                    <!-- Username Field -->
+                                    <div class="mb-3">
+                                        <label for="usernameInput" class="form-label">Username <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="usernameInput" placeholder="Enter your username" name="Username" required>
+                                        <div class="invalid-feedback" style="display:none;">Please enter your username.</div>
+                                    </div>
+                        
+                                    <!-- Email Field -->
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" required readonly>
+                                        <div class="invalid-feedback" style="display:none;">Please provide a valid email address.</div>
+                                    </div>
+                        
+                                    <!-- Phone Number Field -->
+                                    <div class="mb-3">
+                                        <label for="phoneInput" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="countryCode" style="max-width: 120px;" required>
+                                                <option value="+962" selected>+962 (JO)</option>
+                                                <option value="+44">+44 (UK)</option>
+                                                <option value="+91">+91 (India)</option>
+                                                <option value="+61">+61 (Australia)</option>
+                                                <option value="+971">+971 (UAE)</option>
+                                            </select>
+                                            <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
+                                        </div>
+                                        <div class="invalid-feedback" style="display:none;">Please enter a valid phone number.</div>
+                                    </div>
+                        
+                                    <!-- Address Field -->
+                                    <div class="mb-3">
+                                        <label for="addressInput" class="form-label">Address</label>
+                                        <textarea class="form-control" id="addressInput" rows="2" placeholder="Enter your address" name="Address"></textarea>
+                                    </div>
+                        
+                                    <!-- Gender Selection Field -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Gender <span class="text-danger">*</span></label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                            <label class="form-check-label" for="male">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                            <label class="form-check-label" for="female">Female</label>
+                                        </div>
+                                        <div class="invalid-feedback" style="display:none;">Please select your gender.</div>
+                                    </div>
+                        
+                                    <!-- Profile Image Field -->
+                                    <div class="mb-3">
+                                        <label for="imageInput" class="form-label">Profile Image</label>
+                                        <input type="file" class="form-control" id="imageInput" accept="image/png, image/jpeg, image/jpg, image/gif" name="Image" required>
+                                        <small class="text-muted">Accepted formats: .jpg, .jpeg, .png, .gif</small>
+                                        <div class="invalid-feedback" style="display:none;">Please upload a valid image file.</div>
+                                    </div>
+                        
+                                    <!-- Save Changes Button -->
+                                    <div class="d-grid gap-2">
+                                        <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+                                    </div>
+                                </form>
+                        
+                                <!-- Success and Error Messages -->
+                                <div id="profileUpdateSuccess" class="alert alert-success mt-3" style="display:none;">
+                                    Profile updated successfully!
+                                </div>
+                        
+                                <div id="profileUpdateError" class="alert alert-danger mt-3" style="display:none;">
+                                    Error updating profile!
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Change Password Section -->
+                        <div id="ChangePassword" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <hr class="my-4">
+                                <h5 class="mb-3">Change Your Password</h5>
+                                <form id="changePasswordForm" class="needs-validation" novalidate>
+                                    <!-- Current Password Field -->
+                                    <div class="mb-3">
+                                        <label for="currentPasswordInput" class="form-label">Current Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="currentPasswordInput" placeholder="Enter current password" required>
+                                        <div class="invalid-feedback" style="display:none;">Please enter your current password.</div>
+                                    </div>
+                        
+                                    <!-- New Password Field -->
+                                    <div class="mb-3">
+                                        <label for="newPasswordInput" class="form-label">New Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="newPasswordInput" placeholder="Enter new password" required>
+                                        <div class="invalid-feedback" style="display:none;" id="passwordHelp">Please enter a new password.</div>
+                                    </div>
+                        
+                                    <!-- Confirm New Password Field -->
+                                    <div class="mb-3">
+                                        <label for="confirmPasswordInput" class="form-label">Confirm New Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm new password" required>
+                        
+                                        <div class="invalid-feedback" style="display:none;">Please confirm your new password.</div>
+                                    </div>
+
+                                    <!-- Update Password Button -->
+                                    <div class="d-grid gap-2">
+                                        <button type="submit" class="btn btn-secondary btn-lg">Update Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Other Sections (Bids, Alerts, Favorites, etc.) -->
+                        <div id="MyBids" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <!-- Active Bids Section -->
+                                <div class="container my-5">
+                                    <h3>Add New Product to Auction</h3>
+                                    <form id="productForm" class="needs-validation" enctype="multipart/form-data" novalidate>
+                                        
+                                        <!-- Product Name -->
+                                        <div class="mb-3">
+                                            <label for="productName" class="form-label">Product Name</label>
+                                            <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter a product name.</div>
+                                        </div>
+                                
+                                        <!-- Description -->
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Description</label>
+                                            <textarea class="form-control" id="description" rows="3" placeholder="Enter product description" required></textarea>
+                                            <div class="invalid-feedback" style="display: none;">Please provide a description.</div>
+                                        </div>
+                                
+                                        <!-- Starting Price -->
+                                        <div class="mb-3">
+                                            <label for="startingPrice" class="form-label">Starting Price</label>
+                                            <input type="number" class="form-control" id="startingPrice" placeholder="Enter starting price" step="0.01" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter a valid starting price.</div>
+                                        </div>
+                                
+                                        <!-- Stock -->
+                                        <div class="mb-3">
+                                            <label for="stock" class="form-label">Stock Quantity</label>
+                                            <input type="number" class="form-control" id="stock" placeholder="Enter available stock" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter the stock quantity.</div>
+                                        </div>
+                                
+                                        <!-- Condition -->
+                                        <div class="mb-3">
+                                            <label for="condition" class="form-label">Condition</label>
+                                            <select class="form-select" id="condition" required>
+                                                <option selected disabled value="">Select condition</option>
+                                                <option value="New">New</option>
+                                                <option value="Used">Used</option>
+                                                <option value="Refurbished">Refurbished</option>
+                                            </select>
+                                            <div class="invalid-feedback" style="display: none;">Please select a condition.</div>
+                                        </div>
+                                
+                                        <!-- Location -->
+                                        <div class="mb-3">
+                                            <label for="location" class="form-label">Location</label>
+                                            <input type="text" class="form-control" id="location" placeholder="Enter location of the product" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter the location.</div>
+                                        </div>
+                                
+                                        <!-- Country -->
+                                        <div class="mb-3">
+                                            <label for="country" class="form-label">Country</label>
+                                            <input type="text" class="form-control" id="country" placeholder="Enter country of origin or sale" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter the country.</div>
+                                        </div>
+                                
+                                        <!-- Brand -->
+                                        <div class="mb-3">
+                                            <label for="brand" class="form-label">Brand</label>
+                                            <input type="text" class="form-control" id="brand" placeholder="Enter brand of the product" required>
+                                            <div class="invalid-feedback" style="display: none;">Please enter the brand.</div>
+                                        </div>
+                                
+                                        <!-- Category -->
+                                        <div class="mb-3">
+                                            <label for="category" class="form-label">Category</label>
+                                            <select class="form-select" id="category" required>
+                                                <!-- Options would be dynamically populated from the backend -->
+                                                <option selected disabled value="">Select category</option>
+                                                
+                                            </select>
+                                            <div class="invalid-feedback" style="display: none;">Please select a category.</div>
+                                        </div>
+                                
+                                        <!-- Product Image -->
+                                        <div class="mb-3">
+                                            <label for="image" class="form-label">Product Image</label>
+                                            <input type="file" class="form-control" id="image" accept="image/*" required>
+                                            <div class="invalid-feedback" style="display: none;">Please upload a product image.</div>
+                                        </div>
+                                
+                                        <!-- Submit Button -->
+                                        <button type="submit" class="btn btn-primary">Submit Product</button>
+                                    </form>
+                                
+                                    <!-- Success and Error Messages -->
+                                    <div id="productSubmitSuccess" class="alert alert-success mt-3" style="display:none;">Product added successfully!</div>
+                                    <div id="productSubmitError" class="alert alert-danger mt-3" style="display:none;">Error adding product!</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="WinningBids" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <div class="bidding-detail-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Product Name</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>Condition</th>
+                                                    <th>Description</th>
+                                                    <th>Image</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="winingBids">
+                                                <!-- Winning bids will be injected here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="MyAlerts" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <div class="bidding-detail-wrapper">
+                                    <div class="table-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="MyFavorite" class="dashboard-section" style="display: none;">
+                            <div class="dashboard-data">
+                                <div class="bidding-detail-wrapper">
+                                    <div class="table-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="footer-bottom py-2 py-md-4 bg-light">
+            <p class="text-dark text-center">©
+                <script>document.write(new Date().getFullYear());</script> Laqta - All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javascript/dasboard.js"></script>
+    <script src="javascript/navbar.js"></script>
+</body>
+
+</html>

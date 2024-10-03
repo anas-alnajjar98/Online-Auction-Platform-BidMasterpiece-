@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" id="theme" class="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/auction-fevicon.png">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+    <style>
+        /* Add your custom CSS styles here */
+        .table {
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+        padding: 12px 15px;
+    }
+
+    .table thead {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #4a4a4a;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Button styling for accept and reject */
+    .btn-accept {
+        background-color: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-reject {
+        background-color: #dc3545;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-accept:hover {
+        background-color: #218838;
+    }
+
+    .btn-reject:hover {
+        background-color: #c82333;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .table thead {
+            display: none;
+        }
+        .table, .table tbody, .table tr, .table td {
+            display: block;
+            width: 100%;
+        }
+        .table tr {
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .table td {
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+        .table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            width: calc(50% - 20px);
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader bg-light" id="preloader">
+        <span class="preloader-inner"></span>
+    </div>
+
+    <!-- Back-to-top Start -->
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa-solid fa-up-long"></i></a>
+
+    <!-- Main Content Start -->
+    <main id="main-content" class="position-relative">
+        <div class="breadcrumb-main">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <h1 class="breadcrumb-title mx-auto align-self-center">Personal Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="inner-gap">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar Start -->
+                    <div class="col-lg-3 pe-lg-0 position-relative">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3 mt-3 mb-4">
+                                <img src="assets/images/profile.jpg" class="dashboard-avatar" alt="avatar">
+                                <div>
+                                    <h5>abo ahmmad</h5>
+                                    <p>system@mail.com</p>
+                                </div>
+                            </div>
+
+                            <button class="primary-btn dashboard-toggler d-block d-lg-none" id="sidebarMenuOpen">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+
+                        <div class="dashboard-sidebar">
+                            <div class="sidebar-menu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="javascript:void(0)" id="dashboard-link">
+                                            <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="user-info-link">
+                                            <i class="fa-solid fa-user"></i> <span>User Information</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="active-bids-link">
+                                            <i class="fa-solid fa-gavel"></i> <span>Create Auction</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="winners-link">
+                                            <i class="fa-solid fa-comments"></i> <span>Messages to winners</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="category-link">
+                                            <i class="fa-solid fa-list"></i> <span>Category</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="financial-reports-link">
+                                            <i class="fa-solid fa-dollar-sign"></i> <span>Financial Reports</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="add-blog-link">
+                                            <i class="fa-brands fa-blogger"></i> <span>Add Blog</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-sign-out-alt"></i> <span>Logout</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar End -->
+
+                    <!-- Main Content Area Start -->
+                    <div class="col-lg-9 ps-md-0">
+                        <div class="dashboard-data">
+                            <!-- Stats Widgets -->
+                            <div class="row g-3 mb-3 mb-md-5">
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-gavel text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold" id="active-bids-count">80</h3>
+                                                <p>Active Bids</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-trophy text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold" id="items-won-count">15</h3>
+                                                <p>Item Won</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-wrapper">
+                                        <div class="d-flex gap-4">
+                                            <i class="fa-solid fa-star text-orange"></i>
+                                            <div>
+                                                <h3 class="fw-bold" id="favorites-count">124</h3>
+                                                <p>Favorite</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sections for Data Display -->
+                            <div id="dashboard-section" class="dashboard-data-section">
+                                <!-- Dashboard information will be displayed here -->
+                            </div>
+                            <div id="user-info-section" class="dashboard-data-section" style="display: none;">
+                                <table id="user-info-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>User ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Gender</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <div id="active-bids-section" class="dashboard-data-section" style="display:none;">
+                                <!-- Active Bids (Pending Products) -->
+                                <h3>Pending Products</h3>
+                                <table id="pending-products-table" class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Description</th>
+                                            <th>Starting Price</th>
+                                            <th>Stock</th>
+                                            <th>Condition</th>
+                                            <th>Location</th>
+                                            <th>Brand</th>
+                                            <th>Category</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Products will be populated here via JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="messages-section" class="dashboard-data-section" style="display:none;">
+                                <table id="winners-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Auction ID</th>
+                                            <th>Product Name</th>
+                                            <th>Highest Bid</th>
+                                            <th>Highest Bidder</th>
+                                            <th>Bidder Email</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            
+                            <div id="category-section" class="dashboard-data-section" style="display:none;">
+                                hello
+                            </div>
+                            <div id="financial-reports-section" class="dashboard-data-section" style="display:none;">
+                                <!-- Financial Reports -->
+                            </div>
+                            <div id="add-blog-section" class="dashboard-data-section" style="display:none;">
+                                <!-- Add Blog -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Content Area End -->
+                     <!-- Edit User Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editUserModalLabel">Edit User Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editUserForm">
+            <div class="mb-3">
+              <label for="editUsername" class="form-label">Username</label>
+              <input type="text" class="form-control" id="editUsername" required>
+            </div>
+            <div class="mb-3">
+              <label for="editEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="editEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="editAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="editAddress">
+            </div>
+            <div class="mb-3">
+              <label for="editGender" class="form-label">Gender</label>
+              <select class="form-select" id="editGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="editImage" class="form-label">Profile Image</label>
+              <input type="file" class="form-control" id="editImage">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="saveUserChanges">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Auction Modal -->
+<div class="modal fade" id="auctionModal" tabindex="-1" aria-labelledby="auctionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="auctionModalLabel">Place Product in Auction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="auctionForm">
+            <!-- Hidden field to store Product ID -->
+            <input type="hidden" id="productIdInput">
+  
+            <!-- Starting Price (read-only) -->
+            <div class="mb-3">
+              <label for="startingPriceInput" class="form-label">Starting Price</label>
+              <input type="number" class="form-control" id="startingPriceInput" readonly>
+            </div>
+  
+            <!-- Auction Duration -->
+            <div class="mb-3">
+              <label for="durationInput" class="form-label">Auction Duration (in hours)</label>
+              <input type="number" class="form-control" id="durationInput" placeholder="Enter auction duration in hours" required>
+            </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Place Auction</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="javascript/adimin_dashbord.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+</html>
